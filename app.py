@@ -6,9 +6,9 @@ import numpy as np
 # 1. Load Model 4MB Lu
 model = joblib.load('models/amazon_bestseller_predictor.pkl')
 
-st.set_page_config(page_title="The Oracle Predictor", page_icon="🔮")
-st.title("🔮 The Oracle: Amazon Best Seller Predictor")
-st.write("Masukkan detail produk dari dataset 42K items untuk meramal status Best Seller!")
+st.set_page_config(page_title="The Best Seller Predictor", page_icon="🔮")
+st.title("Amazon Best Seller Predictor")
+st.write("Prediksi status Best Seller produk Amazon secara instan dengan akurasi model Random Forest 97%")
 
 # 2. Input UI (Samakan dengan input Gradio lu sebelumnya)
 col1, col2 = st.columns(2)
@@ -21,7 +21,7 @@ with col1:
 
 with col2:
     current_price = st.number_input("Harga Sekarang ($)", min_value=0.0, value=25.0)
-    original_price = st.number_input("Harga Asli ($)", min_value=0.0, value=30.0)
+    original_price = st.number_input("Harga Asli/Sebelum Diskon ($)", min_value=0.0, value=30.0)
     buy_box = st.radio("Buy Box Availability", ["Tersedia", "Tidak"])
 
 # 3. Logika Pemrosesan Fitur (Harus 8 Fitur!)
