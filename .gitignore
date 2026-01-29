@@ -1,7 +1,8 @@
 # Python / AI
 **/__pycache__/
 **/.venv/
-
+*/__pycache__/
+*/.venv/
 # Next.js / Frontend
 **/node_modules/
 **/.next/
